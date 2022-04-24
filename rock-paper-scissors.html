@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+  <!-- Custom css -->
+  <link rel="stylesheet" href="./public/CSS/desktop-style.css">
+  <link rel="stylesheet" href="./public/CSS/mobile-style.css" media="screen and (max-width:950px)">
+
+  <!-- jQuery cdn -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./public/game.js" defer></script>
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <header>
+    <img src="./public/images/logo.svg" alt="logo">
+    <div class="score">
+      <p>Score</p>
+      <span>0</span>
+    </div>
+  </header>
+
+  <main class="main">
+    <img src="./public/images/bg-triangle.svg" alt="bg-triangle">
+    <div id="scissors"><img src="./public/images/icon-scissors.svg" alt="icon-scissors"></div>
+    <div id="paper"><img src="./public/images/icon-paper.svg" alt="icon-paper"></div>
+    <div id="rock"><img src="./public/images/icon-rock.svg" alt="icon-rock"></div>
+  </main>
+
+  <div class="rules">
+    <div>
+      <h2>RULES</h2>
+      <img src="./public/images/icon-close.svg" alt="icon-close">
+    </div>
+    <img src="./public/images/image-rules.svg" alt="image-rules">
+  </div>
+
+  <footer>
+    <button>Rules</button>
+  </footer>
+
+</body>
+
+</html>

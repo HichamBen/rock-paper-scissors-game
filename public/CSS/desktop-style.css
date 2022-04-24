@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-image: -moz-radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-image: -webkit-radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    font-family: "Barlow Semi Condensed", sans-serif;
+    height: 100vh;
+}
+
+header {
+    width: 700px;
+    margin: 48px auto;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Card that show the score */
+.score {
+    width: 160px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.score>p {
+    color: hsl(229, 64%, 46%);
+    font-weight: 600;
+    font-size: 18px;
+    padding-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.score>span {
+    color: hsl(229, 25%, 31%);
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+/* main element that allows to pick item(scissors, paper, or rock) from it */
+.main {
+    width: 300px;
+    height: 280px;
+    margin: 150px auto 25px;
+    position: relative;
+}
+
+.main>div, .main>img {
+    position: absolute;
+}
+
+.main>div {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    border-top: 10px solid hsl(217, 16%, 65%);
+    cursor: pointer;
+}
+
+#paper {
+    transform: translate(-50%, -50%);
+    outline: 20px solid hsl(230, 89%, 65%);
+}
+
+#scissors {
+    right: 0;
+    transform: translate(50%, -50%);
+    outline: 20px solid hsl(40, 84%, 53%);
+}
+
+#rock {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    outline: 20px solid hsl(349, 70%, 56%);
+}
+
+.paper-active {
+    outline-color: hsl(230, 89%, 65%);
+}
+
+.rock-active {
+    outline-color: hsl(349, 70%, 56%);
+}
+
+.scissors-active {
+    outline-color: hsl(40, 84%, 53%);
+}
+
+
+#paper>img, #rock>img, #scissors>img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Section that render the rules */
+.rules {
+    display: none;
+    padding: 25px;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.rules>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    color: hsl(214, 47%, 23%);
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+[alt=icon-close] {
+    cursor: pointer;
+}
+
+footer {
+    padding: 25px;
+    text-align: right;
+}
+
+footer>button {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    padding: 10px 45px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* main element where the match is playing */
+
+.match {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.players-side {
+    width: 300px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+}
+
+.item-picked {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    position: relative;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    border-top: 15px solid hsl(217, 16%, 75%);
+    outline-width: 40px;
+    outline-style: solid;
+}
+
+.item-picked>img {
+    width: 108px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* showing before computer picked an item */
+.befor-picked {
+    background-color: hsl(237, 49%, 15%);
+    border-top: none;
+    outline: none;
+}
+
+/* Colors around the winner  */
+#your-picked .winner, #house-picked .winner {
+    width: 520px;
+    height: 520px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(circle, hsla(237, 49%, 15%, 0.05), hsla(237, 49%, 15%, 0.1) 200px, hsla(237, 49%, 15%, 0.2) 200px);
+    background-image: -moz-radial-gradient(circle, hsla(237, 49%, 15%, 0.05), hsla(237, 49%, 15%, 0.1) 200px, hsla(237, 49%, 15%, 0.2) 200px);
+    background-image: -webkit-radial-gradient(circle, hsla(237, 49%, 15%, 0.05), hsla(237, 49%, 15%, 0.1) 200px, hsla(237, 49%, 15%, 0.2) 200px);
+
+    outline: 62px solid hsla(237, 49%, 15%, 0.3);
+}
+
+/* Div showing the result */
+.result {
+    width: 350px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 45px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result>button {
+    margin-top: 25px;
+    font-size: 16px;
+    padding: 10px 35px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    color: hsl(229, 25%, 31%);
+    cursor: pointer;
+}
+
+.result>button:hover {
+    color: hsl(349, 70%, 56%);
+}

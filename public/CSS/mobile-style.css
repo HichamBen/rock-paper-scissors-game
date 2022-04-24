@@ -1,0 +1,193 @@
+body {
+    width: 100%;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+@media screen and (max-width:774px) {
+    header {
+        width: 80%;
+        padding: 15px 20px;
+    }
+
+    footer {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    /* main element where the match is playing */
+    .match {
+        width: 500px;
+        position: relative;
+    }
+
+    .players-side {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .item-picked {
+        width: 120px;
+        height: 120px;
+        border-top: 10px solid hsl(217, 16%, 75%);
+        outline-width: 16px;
+    }
+
+    .item-picked>img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* showing before computer picked an item */
+    .befor-picked {
+        background-color: hsl(237, 49%, 15%);
+        border-top: none;
+        outline: none;
+    }
+
+    /* Colors around the winner  */
+    #your-picked .winner, #house-picked .winner {
+        width: 180px;
+        height: 180px;
+        background-image: radial-gradient(circle, hsla(237, 49%, 15%, 0.05), hsla(237, 49%, 15%, 0.1) 77px, hsla(237, 49%, 15%, 0.2) 77px);
+        background-image: -moz-radial-gradient(circle, hsla(237, 49%, 15%, 0.05), hsla(237, 49%, 15%, 0.1) 77px, hsla(237, 49%, 15%, 0.2) 77px);
+        background-image: -webkit-radial-gradient(circle, hsla(237, 49%, 15%, 0.05), hsla(237, 49%, 15%, 0.1) 77px, hsla(237, 49%, 15%, 0.2) 77px);
+        outline: 25px solid hsla(237, 49%, 15%, 0.3);
+    }
+
+    /* Div showing the result */
+    .result {
+        position: absolute;
+        left: 75px;
+        bottom: -25%;
+    }
+
+    h1 {
+        letter-spacing: 0;
+    }
+
+    .result>button {
+        margin-top: 15px;
+    }
+}
+
+
+@media screen and (max-width:520px) {
+
+    header>img {
+        width: 80px;
+        align-self: center;
+    }
+
+    /* Card that show the score */
+    .score {
+        width: 80px;
+        padding: 10px;
+    }
+
+    .score>p {
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 0;
+    }
+
+    .score>span {
+        color: hsl(229, 25%, 31%);
+        font-weight: 700;
+        font-size: 32px;
+        padding: 0;
+    }
+
+    /* main element that allows to pick item(scissors, paper, or rock) from it */
+    .main {
+        width: 200px;
+        height: 180px;
+        margin: 150px auto;
+    }
+
+    .main>img {
+        width: 200px;
+        height: 180px;
+    }
+
+    .main>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    #paper {
+        outline-width: 16px;
+    }
+
+    #scissors {
+        outline-width: 16px;
+    }
+
+    #rock {
+        outline-width: 16px;
+    }
+
+    /* Section that render the rules */
+    .rules {
+        padding-top: 100px;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .rules>div {
+        display: block;
+        align-items: center;
+        padding-bottom: 35px;
+    }
+
+    .rules>img {
+        padding-top: 100px;
+    }
+
+    /* Align the close icon */
+    img[alt="icon-close"] {
+        position: absolute;
+        bottom: 60px;
+    }
+
+    /* main element where the match is playing */
+    .match {
+        width: 390px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .item-picked {
+        width: 100px;
+        height: 100px;
+        border-top: 5px solid hsl(217, 16%, 75%);
+        outline-width: 8px;
+    }
+
+    /* showing before computer picked an item */
+    .befor-picked {
+        background-color: hsl(237, 49%, 15%);
+        border-top: none;
+        outline: none;
+    }
+
+    /* Div showing the result */
+    .result {
+        left: 20px;
+    }
+
+}
