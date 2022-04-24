@@ -10,8 +10,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://hichamben.github.io/rock-paper-scissors-game/
 
 ### Built with
 
